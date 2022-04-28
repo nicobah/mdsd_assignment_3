@@ -4,7 +4,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: dk.sdu.mmmi.mdsd.math
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: dk.sdu.mmmi.mdsd.math2;singleton:=true
+Bundle-SymbolicName: dk.sdu.mmmi.mdsd.math;singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.xbase,

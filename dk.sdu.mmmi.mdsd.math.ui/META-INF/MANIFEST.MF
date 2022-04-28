@@ -4,9 +4,9 @@ Bundle-ManifestVersion: 2
 Bundle-Name: dk.sdu.mmmi.mdsd.math.ui
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: dk.sdu.mmmi.mdsd.math.ui2;singleton:=true
+Bundle-SymbolicName: dk.sdu.mmmi.mdsd.math.ui;singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: dk.sdu.mmmi.mdsd.math2,
+Require-Bundle: dk.sdu.mmmi.mdsd.math,
  dk.sdu.mmmi.mdsd.math.ide2,
  org.eclipse.xtext.ui,
  org.eclipse.xtext.ui.shared,
