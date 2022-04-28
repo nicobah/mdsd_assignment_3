@@ -66,16 +66,21 @@ public class MathFactoryImpl extends EFactoryImpl implements MathFactory
     switch (eClass.getClassifierID())
     {
       case MathPackage.MATH_EXP: return createMathExp();
+      case MathPackage.PARAMETER: return createParameter();
+      case MathPackage.PARAMETER_USE: return createParameterUse();
       case MathPackage.VAR_BINDING: return createVarBinding();
       case MathPackage.EXPRESSION: return createExpression();
       case MathPackage.LET_BINDING: return createLetBinding();
       case MathPackage.BINDING: return createBinding();
+      case MathPackage.EXTERNAL_BINDING: return createExternalBinding();
+      case MathPackage.EXTERNAL_DECLARATION: return createExternalDeclaration();
       case MathPackage.VARIABLE_USE: return createVariableUse();
       case MathPackage.PLUS: return createPlus();
       case MathPackage.MINUS: return createMinus();
       case MathPackage.MULT: return createMult();
       case MathPackage.DIV: return createDiv();
       case MathPackage.MATH_NUMBER: return createMathNumber();
+      case MathPackage.PARENTHESIS: return createParenthesis();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -91,6 +96,30 @@ public class MathFactoryImpl extends EFactoryImpl implements MathFactory
   {
     MathExpImpl mathExp = new MathExpImpl();
     return mathExp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Parameter createParameter()
+  {
+    ParameterImpl parameter = new ParameterImpl();
+    return parameter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ParameterUse createParameterUse()
+  {
+    ParameterUseImpl parameterUse = new ParameterUseImpl();
+    return parameterUse;
   }
 
   /**
@@ -139,6 +168,30 @@ public class MathFactoryImpl extends EFactoryImpl implements MathFactory
   {
     BindingImpl binding = new BindingImpl();
     return binding;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ExternalBinding createExternalBinding()
+  {
+    ExternalBindingImpl externalBinding = new ExternalBindingImpl();
+    return externalBinding;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ExternalDeclaration createExternalDeclaration()
+  {
+    ExternalDeclarationImpl externalDeclaration = new ExternalDeclarationImpl();
+    return externalDeclaration;
   }
 
   /**
@@ -211,6 +264,18 @@ public class MathFactoryImpl extends EFactoryImpl implements MathFactory
   {
     MathNumberImpl mathNumber = new MathNumberImpl();
     return mathNumber;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Parenthesis createParenthesis()
+  {
+    ParenthesisImpl parenthesis = new ParenthesisImpl();
+    return parenthesis;
   }
 
   /**

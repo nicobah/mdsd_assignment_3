@@ -33,6 +33,24 @@ public interface MathFactory extends EFactory
   MathExp createMathExp();
 
   /**
+   * Returns a new object of class '<em>Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Parameter</em>'.
+   * @generated
+   */
+  Parameter createParameter();
+
+  /**
+   * Returns a new object of class '<em>Parameter Use</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Parameter Use</em>'.
+   * @generated
+   */
+  ParameterUse createParameterUse();
+
+  /**
    * Returns a new object of class '<em>Var Binding</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -67,6 +85,24 @@ public interface MathFactory extends EFactory
    * @generated
    */
   Binding createBinding();
+
+  /**
+   * Returns a new object of class '<em>External Binding</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>External Binding</em>'.
+   * @generated
+   */
+  ExternalBinding createExternalBinding();
+
+  /**
+   * Returns a new object of class '<em>External Declaration</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>External Declaration</em>'.
+   * @generated
+   */
+  ExternalDeclaration createExternalDeclaration();
 
   /**
    * Returns a new object of class '<em>Variable Use</em>'.
@@ -121,6 +157,15 @@ public interface MathFactory extends EFactory
    * @generated
    */
   MathNumber createMathNumber();
+
+  /**
+   * Returns a new object of class '<em>Parenthesis</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Parenthesis</em>'.
+   * @generated
+   */
+  Parenthesis createParenthesis();
 
   /**
    * Returns the package supported by this factory.

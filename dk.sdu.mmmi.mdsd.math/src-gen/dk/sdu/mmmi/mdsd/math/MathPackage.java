@@ -68,13 +68,31 @@ public interface MathPackage extends EPackage
   int MATH_EXP = 0;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_EXP__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Externals</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATH_EXP__EXTERNALS = 1;
+
+  /**
    * The feature id for the '<em><b>Variables</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MATH_EXP__VARIABLES = 0;
+  int MATH_EXP__VARIABLES = 2;
 
   /**
    * The number of structural features of the '<em>Exp</em>' class.
@@ -83,7 +101,72 @@ public interface MathPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATH_EXP_FEATURE_COUNT = 1;
+  int MATH_EXP_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link dk.sdu.mmmi.mdsd.math.impl.ParameterImpl <em>Parameter</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see dk.sdu.mmmi.mdsd.math.impl.ParameterImpl
+   * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getParameter()
+   * @generated
+   */
+  int PARAMETER = 1;
+
+  /**
+   * The feature id for the '<em><b>Params</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER__PARAMS = 0;
+
+  /**
+   * The number of structural features of the '<em>Parameter</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link dk.sdu.mmmi.mdsd.math.impl.ParameterUseImpl <em>Parameter Use</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see dk.sdu.mmmi.mdsd.math.impl.ParameterUseImpl
+   * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getParameterUse()
+   * @generated
+   */
+  int PARAMETER_USE = 2;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_USE__EXP = 0;
+
+  /**
+   * The feature id for the '<em><b>Exp2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_USE__EXP2 = 1;
+
+  /**
+   * The number of structural features of the '<em>Parameter Use</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_USE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link dk.sdu.mmmi.mdsd.math.impl.BindingImpl <em>Binding</em>}' class.
@@ -93,7 +176,7 @@ public interface MathPackage extends EPackage
    * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getBinding()
    * @generated
    */
-  int BINDING = 4;
+  int BINDING = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -121,7 +204,7 @@ public interface MathPackage extends EPackage
    * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getVarBinding()
    * @generated
    */
-  int VAR_BINDING = 1;
+  int VAR_BINDING = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -158,7 +241,7 @@ public interface MathPackage extends EPackage
    * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 2;
+  int EXPRESSION = 4;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -177,7 +260,7 @@ public interface MathPackage extends EPackage
    * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getLetBinding()
    * @generated
    */
-  int LET_BINDING = 3;
+  int LET_BINDING = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -216,6 +299,80 @@ public interface MathPackage extends EPackage
   int LET_BINDING_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
   /**
+   * The meta object id for the '{@link dk.sdu.mmmi.mdsd.math.impl.ExternalBindingImpl <em>External Binding</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see dk.sdu.mmmi.mdsd.math.impl.ExternalBindingImpl
+   * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getExternalBinding()
+   * @generated
+   */
+  int EXTERNAL_BINDING = 7;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXTERNAL_BINDING__NAME = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Params</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXTERNAL_BINDING__PARAMS = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>External Binding</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXTERNAL_BINDING_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link dk.sdu.mmmi.mdsd.math.impl.ExternalDeclarationImpl <em>External Declaration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see dk.sdu.mmmi.mdsd.math.impl.ExternalDeclarationImpl
+   * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getExternalDeclaration()
+   * @generated
+   */
+  int EXTERNAL_DECLARATION = 8;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXTERNAL_DECLARATION__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Param</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXTERNAL_DECLARATION__PARAM = 1;
+
+  /**
+   * The number of structural features of the '<em>External Declaration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXTERNAL_DECLARATION_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link dk.sdu.mmmi.mdsd.math.impl.VariableUseImpl <em>Variable Use</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -223,7 +380,7 @@ public interface MathPackage extends EPackage
    * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getVariableUse()
    * @generated
    */
-  int VARIABLE_USE = 5;
+  int VARIABLE_USE = 9;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' reference.
@@ -251,7 +408,7 @@ public interface MathPackage extends EPackage
    * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getPlus()
    * @generated
    */
-  int PLUS = 6;
+  int PLUS = 10;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -288,7 +445,7 @@ public interface MathPackage extends EPackage
    * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getMinus()
    * @generated
    */
-  int MINUS = 7;
+  int MINUS = 11;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -325,7 +482,7 @@ public interface MathPackage extends EPackage
    * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getMult()
    * @generated
    */
-  int MULT = 8;
+  int MULT = 12;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -362,7 +519,7 @@ public interface MathPackage extends EPackage
    * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getDiv()
    * @generated
    */
-  int DIV = 9;
+  int DIV = 13;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -399,7 +556,7 @@ public interface MathPackage extends EPackage
    * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getMathNumber()
    * @generated
    */
-  int MATH_NUMBER = 10;
+  int MATH_NUMBER = 14;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -419,6 +576,34 @@ public interface MathPackage extends EPackage
    */
   int MATH_NUMBER_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
+  /**
+   * The meta object id for the '{@link dk.sdu.mmmi.mdsd.math.impl.ParenthesisImpl <em>Parenthesis</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see dk.sdu.mmmi.mdsd.math.impl.ParenthesisImpl
+   * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getParenthesis()
+   * @generated
+   */
+  int PARENTHESIS = 15;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARENTHESIS__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Parenthesis</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARENTHESIS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
 
   /**
    * Returns the meta object for class '{@link dk.sdu.mmmi.mdsd.math.MathExp <em>Exp</em>}'.
@@ -431,6 +616,28 @@ public interface MathPackage extends EPackage
   EClass getMathExp();
 
   /**
+   * Returns the meta object for the attribute '{@link dk.sdu.mmmi.mdsd.math.MathExp#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.MathExp#getName()
+   * @see #getMathExp()
+   * @generated
+   */
+  EAttribute getMathExp_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link dk.sdu.mmmi.mdsd.math.MathExp#getExternals <em>Externals</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Externals</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.MathExp#getExternals()
+   * @see #getMathExp()
+   * @generated
+   */
+  EReference getMathExp_Externals();
+
+  /**
    * Returns the meta object for the containment reference list '{@link dk.sdu.mmmi.mdsd.math.MathExp#getVariables <em>Variables</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -440,6 +647,59 @@ public interface MathPackage extends EPackage
    * @generated
    */
   EReference getMathExp_Variables();
+
+  /**
+   * Returns the meta object for class '{@link dk.sdu.mmmi.mdsd.math.Parameter <em>Parameter</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Parameter</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.Parameter
+   * @generated
+   */
+  EClass getParameter();
+
+  /**
+   * Returns the meta object for the attribute list '{@link dk.sdu.mmmi.mdsd.math.Parameter#getParams <em>Params</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Params</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.Parameter#getParams()
+   * @see #getParameter()
+   * @generated
+   */
+  EAttribute getParameter_Params();
+
+  /**
+   * Returns the meta object for class '{@link dk.sdu.mmmi.mdsd.math.ParameterUse <em>Parameter Use</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Parameter Use</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.ParameterUse
+   * @generated
+   */
+  EClass getParameterUse();
+
+  /**
+   * Returns the meta object for the containment reference '{@link dk.sdu.mmmi.mdsd.math.ParameterUse#getExp <em>Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.ParameterUse#getExp()
+   * @see #getParameterUse()
+   * @generated
+   */
+  EReference getParameterUse_Exp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link dk.sdu.mmmi.mdsd.math.ParameterUse#getExp2 <em>Exp2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp2</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.ParameterUse#getExp2()
+   * @see #getParameterUse()
+   * @generated
+   */
+  EReference getParameterUse_Exp2();
 
   /**
    * Returns the meta object for class '{@link dk.sdu.mmmi.mdsd.math.VarBinding <em>Var Binding</em>}'.
@@ -524,6 +784,59 @@ public interface MathPackage extends EPackage
    * @generated
    */
   EAttribute getBinding_Name();
+
+  /**
+   * Returns the meta object for class '{@link dk.sdu.mmmi.mdsd.math.ExternalBinding <em>External Binding</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>External Binding</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.ExternalBinding
+   * @generated
+   */
+  EClass getExternalBinding();
+
+  /**
+   * Returns the meta object for the containment reference '{@link dk.sdu.mmmi.mdsd.math.ExternalBinding#getParams <em>Params</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Params</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.ExternalBinding#getParams()
+   * @see #getExternalBinding()
+   * @generated
+   */
+  EReference getExternalBinding_Params();
+
+  /**
+   * Returns the meta object for class '{@link dk.sdu.mmmi.mdsd.math.ExternalDeclaration <em>External Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>External Declaration</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.ExternalDeclaration
+   * @generated
+   */
+  EClass getExternalDeclaration();
+
+  /**
+   * Returns the meta object for the attribute '{@link dk.sdu.mmmi.mdsd.math.ExternalDeclaration#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.ExternalDeclaration#getName()
+   * @see #getExternalDeclaration()
+   * @generated
+   */
+  EAttribute getExternalDeclaration_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link dk.sdu.mmmi.mdsd.math.ExternalDeclaration#getParam <em>Param</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Param</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.ExternalDeclaration#getParam()
+   * @see #getExternalDeclaration()
+   * @generated
+   */
+  EReference getExternalDeclaration_Param();
 
   /**
    * Returns the meta object for class '{@link dk.sdu.mmmi.mdsd.math.VariableUse <em>Variable Use</em>}'.
@@ -696,6 +1009,27 @@ public interface MathPackage extends EPackage
   EAttribute getMathNumber_Value();
 
   /**
+   * Returns the meta object for class '{@link dk.sdu.mmmi.mdsd.math.Parenthesis <em>Parenthesis</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Parenthesis</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.Parenthesis
+   * @generated
+   */
+  EClass getParenthesis();
+
+  /**
+   * Returns the meta object for the containment reference '{@link dk.sdu.mmmi.mdsd.math.Parenthesis#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Value</em>'.
+   * @see dk.sdu.mmmi.mdsd.math.Parenthesis#getValue()
+   * @see #getParenthesis()
+   * @generated
+   */
+  EReference getParenthesis_Value();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -729,12 +1063,72 @@ public interface MathPackage extends EPackage
     EClass MATH_EXP = eINSTANCE.getMathExp();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MATH_EXP__NAME = eINSTANCE.getMathExp_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Externals</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MATH_EXP__EXTERNALS = eINSTANCE.getMathExp_Externals();
+
+    /**
      * The meta object literal for the '<em><b>Variables</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference MATH_EXP__VARIABLES = eINSTANCE.getMathExp_Variables();
+
+    /**
+     * The meta object literal for the '{@link dk.sdu.mmmi.mdsd.math.impl.ParameterImpl <em>Parameter</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see dk.sdu.mmmi.mdsd.math.impl.ParameterImpl
+     * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getParameter()
+     * @generated
+     */
+    EClass PARAMETER = eINSTANCE.getParameter();
+
+    /**
+     * The meta object literal for the '<em><b>Params</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PARAMETER__PARAMS = eINSTANCE.getParameter_Params();
+
+    /**
+     * The meta object literal for the '{@link dk.sdu.mmmi.mdsd.math.impl.ParameterUseImpl <em>Parameter Use</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see dk.sdu.mmmi.mdsd.math.impl.ParameterUseImpl
+     * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getParameterUse()
+     * @generated
+     */
+    EClass PARAMETER_USE = eINSTANCE.getParameterUse();
+
+    /**
+     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER_USE__EXP = eINSTANCE.getParameterUse_Exp();
+
+    /**
+     * The meta object literal for the '<em><b>Exp2</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER_USE__EXP2 = eINSTANCE.getParameterUse_Exp2();
 
     /**
      * The meta object literal for the '{@link dk.sdu.mmmi.mdsd.math.impl.VarBindingImpl <em>Var Binding</em>}' class.
@@ -807,6 +1201,50 @@ public interface MathPackage extends EPackage
      * @generated
      */
     EAttribute BINDING__NAME = eINSTANCE.getBinding_Name();
+
+    /**
+     * The meta object literal for the '{@link dk.sdu.mmmi.mdsd.math.impl.ExternalBindingImpl <em>External Binding</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see dk.sdu.mmmi.mdsd.math.impl.ExternalBindingImpl
+     * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getExternalBinding()
+     * @generated
+     */
+    EClass EXTERNAL_BINDING = eINSTANCE.getExternalBinding();
+
+    /**
+     * The meta object literal for the '<em><b>Params</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXTERNAL_BINDING__PARAMS = eINSTANCE.getExternalBinding_Params();
+
+    /**
+     * The meta object literal for the '{@link dk.sdu.mmmi.mdsd.math.impl.ExternalDeclarationImpl <em>External Declaration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see dk.sdu.mmmi.mdsd.math.impl.ExternalDeclarationImpl
+     * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getExternalDeclaration()
+     * @generated
+     */
+    EClass EXTERNAL_DECLARATION = eINSTANCE.getExternalDeclaration();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXTERNAL_DECLARATION__NAME = eINSTANCE.getExternalDeclaration_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Param</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXTERNAL_DECLARATION__PARAM = eINSTANCE.getExternalDeclaration_Param();
 
     /**
      * The meta object literal for the '{@link dk.sdu.mmmi.mdsd.math.impl.VariableUseImpl <em>Variable Use</em>}' class.
@@ -947,6 +1385,24 @@ public interface MathPackage extends EPackage
      * @generated
      */
     EAttribute MATH_NUMBER__VALUE = eINSTANCE.getMathNumber_Value();
+
+    /**
+     * The meta object literal for the '{@link dk.sdu.mmmi.mdsd.math.impl.ParenthesisImpl <em>Parenthesis</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see dk.sdu.mmmi.mdsd.math.impl.ParenthesisImpl
+     * @see dk.sdu.mmmi.mdsd.math.impl.MathPackageImpl#getParenthesis()
+     * @generated
+     */
+    EClass PARENTHESIS = eINSTANCE.getParenthesis();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARENTHESIS__VALUE = eINSTANCE.getParenthesis_Value();
 
   }
 

@@ -3,12 +3,25 @@ grammar dk.sdu.mmmi.mdsd.Math with org.eclipse.xtext.common.Terminals
 generate math "http://www.sdu.dk/mmmi/mdsd/Math"
 
 MathExp:
-	variables += VarBinding*
+	'program' name=ID externals+=ExternalDeclaration* variables += VarBinding* 
 ;
+
+Parameter:
+	{Parameter} '(' (params+='int' (','params+='int')*)? ')'
+	//'('('int'|'int'',''int')?')'
+;
+
+ParameterUse:
+	 {ParameterUse}  //'(' (expressions+=Exp (',' expressions+=Exp)*)? ')'
+	  '('(exp=Exp)? (',' exp2=Exp)?')'
+	
+;
+
 
 VarBinding:
 	'var' name=ID '=' expression=Exp
 ;
+
 
 Exp returns Expression:
 	Factor (( {Plus.left=current} '+' | {Minus.left=current}  '-' ) right=Factor)*
@@ -19,7 +32,7 @@ Factor returns Expression:
 ;
 
 Primary returns Expression:
-	{MathNumber} value=INT  | '(' Exp ')'  |  VariableUse | LetBinding
+	{MathNumber} value=INT  | {Parenthesis} '(' value=Exp ')'  |  VariableUse | LetBinding | ExternalBinding
 ;
 
 LetBinding:
@@ -27,7 +40,14 @@ LetBinding:
 ;
 
 Binding:
-	VarBinding | LetBinding
+	VarBinding | LetBinding | ExternalBinding
+;
+
+ExternalBinding:
+	name=ID params=ParameterUse
+;
+ExternalDeclaration:
+	'external' name=ID param=Parameter
 ;
 
 VariableUse:
